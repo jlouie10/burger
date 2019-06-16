@@ -1,8 +1,10 @@
 const orm = require('../config/orm.js');
 
 let burger = {
-    all: () => {
-        orm.selectAll();
+    all: (callback) => {
+        orm.selectAll('burgers', res => {
+            callback(res);
+        });
     },
     create: () => {
         orm.insertOne();
