@@ -1,13 +1,16 @@
 const orm = require('../config/orm.js');
 
 let burger = {
-    all: (callback) => {
-        orm.selectAll('burgers', res => {
+    table: 'burgers',
+    all: (columns, callback) => {
+        orm.selectAll(burger.table, columns, res => {
             callback(res);
         });
     },
-    create: () => {
-        orm.insertOne();
+    create: (payload, callback) => {
+        orm.insertOne(burger.table, payload, res => {
+            callback(res);
+        });
     },
     update: () => {
         orm.updateOne();

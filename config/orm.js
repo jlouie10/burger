@@ -1,8 +1,7 @@
 const connection = require('./connection.js');
 
 let orm = {
-    selectAll: (table, callback) => {
-        let columns = ['burger_id', 'burger_name', 'devoured'];
+    selectAll: (table, columns, callback) => {
         let queryString = 'SELECT ?? FROM ??';
 
         connection.query(queryString, [columns, table], (err, rows) => {
@@ -11,8 +10,14 @@ let orm = {
             callback(rows);
         });
     },
-    insertOne: () => {
+    insertOne: (table, params, callback) => {
+        let queryString = 'INSERT INTO ?? SET ?';
 
+        connection.query(queryString, [table, params], (err, rows) => {
+            if (err) throw err;
+
+            callback(rows);
+        });
     },
     updateOne: () => {
 
