@@ -6,8 +6,8 @@ let router = express.Router();
 router.get("/", (req, res) => {
     let columns = ['burger_id', 'burger_name', 'devoured'];
 
-    burger.all(columns, data => {
-        res.json(data);
+    burger.all(columns, burgers => {
+        res.render("index", { burgers });
     });
 });
 
