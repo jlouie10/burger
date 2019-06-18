@@ -19,8 +19,17 @@ let orm = {
             callback(rows);
         });
     },
-    updateOne: () => {
+    updateOne: (table, params, callback) => {
+        let queryString = 'UPDATE ?? SET ? WHERE ?';
+        let whereParams = {
+            burger_id: params.id
+        };
 
+        connection.query(queryString, [table, params.data, whereParams], (err, rows) => {
+            if (err) throw err;
+
+            callback(rows);
+        });
     }
 };
 

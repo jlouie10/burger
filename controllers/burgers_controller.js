@@ -22,4 +22,15 @@ router.post("/api/burgers", (req, res) => {
     });
 });
 
+router.put("/api/burgers/:id", (req, res) => {
+    let payload = {
+        id: req.params.id,
+        data: req.body
+    };
+
+    burger.update(payload, result => {
+        res.json(payload);
+    });
+});
+
 module.exports = router;

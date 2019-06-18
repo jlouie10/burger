@@ -12,8 +12,10 @@ let burger = {
             callback(res);
         });
     },
-    update: () => {
-        orm.updateOne();
+    update: (payload, callback) => {
+        orm.updateOne(burger.table, payload, res => {
+            callback(res);
+        });
     }
 }
 
