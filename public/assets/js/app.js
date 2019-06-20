@@ -1,6 +1,5 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
-    $('#order-burger').on('submit', (event) => {
+    $('#order-burger').on('submit', event => {
         event.preventDefault();
 
         let order = {
@@ -12,5 +11,20 @@ $(() => {
             .then(() => {
                 location.reload();
             });
+    });
+
+    $('.devour').on('click', function (event) {
+        let id = $(this).data('id');
+        let devourRequest = {
+            devoured: 1
+        };
+
+        // Update burger state using PUT request
+        $.ajax('/api/burgers/' + id, {
+            type: 'PUT',
+            data: devourRequest
+        }).then(() => {
+            location.reload();
+        });
     });
 });
