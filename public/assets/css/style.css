@@ -26,6 +26,24 @@ body {
     background-color: rgb(96, 156, 79);
 }
 
+.help-text {
+    font-size: 12px;
+    color: #666;
+}
+
+.devour:hover, .devour:active, .devour:focus {
+    transition: transform 200ms ease 0s;
+    transform: scaleX(1.05) scaleY(1.05);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .16);
+    cursor: pointer;
+}
+
+.devoured {
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
 .img-burger {
     max-height: 150px;
     max-width: 150px;

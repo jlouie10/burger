@@ -22,7 +22,7 @@ router.post("/api/burgers", (req, res) => {
     });
 });
 
-router.put("/api/burgers/:id", (req, res) => {
+router.patch("/api/burgers/:id", (req, res) => {
     let payload = {
         id: req.params.id,
         data: req.body

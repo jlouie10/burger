@@ -21,7 +21,7 @@ $(() => {
 
         // Update burger state using PUT request
         $.ajax('/api/burgers/' + id, {
-            type: 'PUT',
+            type: 'PATCH',
             data: devourRequest
         }).then(() => {
             location.reload();
