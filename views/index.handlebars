@@ -1,25 +1,7 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Eat-Da-Burger</h1>
-
-            <h2>Devour your favorite burger.</h2>
-
-            <h2>Order a burger</h2>
-            <form id="order-burger">
-
-                <div class="form-group">
-                    <label for="burger">Burger Name</label>
-                    <input type="text" id="burger" name="burger_name">
-                </div>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
+<div class="container my-5">
     <div class="row">
         <div class="col-6">
-            <h2>Ready to eat</h2>
+            <h4>Devour your favorite burger</h4>
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
@@ -29,7 +11,7 @@
             </ul>
         </div>
         <div class="col-6">
-            <h2>Devoured</h2>
+            <h4>Devoured</h4>
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}

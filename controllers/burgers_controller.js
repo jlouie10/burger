@@ -4,7 +4,7 @@ const burger = require("../models/burger.js");
 let router = express.Router();
 
 router.get("/", (req, res) => {
-    let columns = ['burger_id', 'burger_name', 'devoured'];
+    let columns = ['burger_id', 'burger_name', 'devoured', 'description', 'image_url'];
 
     burger.all(columns, burgers => {
         res.render("index", { burgers });

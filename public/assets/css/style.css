@@ -1,4 +1,32 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.navbar-brand span {
+    color: #8dbf54;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: rgb(62, 153, 32);
+}
+
+.btn-custom:hover, .btn-custom:active, .btn-custom:focus {
+    color: #fff;
+    background-color: rgb(96, 156, 79);
+}
+
+.img-burger {
+    max-height: 150px;
+    max-width: 150px;
 }

@@ -1,3 +1,17 @@
 <li>
-    <a href="#" class="devour" data-id="{{burger_id}}">{{burger_name}}</a>
+    <div class="card devour my-2" data-id="{{burger_id}}">
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <h5 class="card-title">{{burger_name}}</h5>
+                        <p class="card-text">{{description}}</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="{{image_url}}" class="img-burger" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </li>
